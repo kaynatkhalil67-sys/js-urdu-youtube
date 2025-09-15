@@ -27,3 +27,4 @@ let bay = 22
 let myname = String(bay)
 console.log(typeof myname)
 console.log(myname)
+console.table([myname, IsloggedIn, valueInNum])
