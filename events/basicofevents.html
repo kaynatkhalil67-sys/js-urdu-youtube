@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //document.getElementById('owl').onclick=function(){
+          //  alert("owl clicked")
+        //}
+        document.getElementById('images').addEventListener( 'click',function(){
+            alert('clicke inside ul again')
+        },false) // false is optional some events don't happen without false so then we use this
+        //attachEvent()
+        // jQuery - om 
+        // event object 
+        // function(e){}
+        // event propogation 
+        // event bubling , event capturing 
+      document.getElementById('owl').addEventListener( 'click',function(//e){
+            alert('owl clicked again')
+             //e.stopPropagation to stop bubling
+      },false) // event bubling 
+        document.getElementById('owl').addEventListener( 'click',function(){
+            alert('owl clicked again')
+      },true) // event capturing 
+       document.getElementById('google').addEventListener( 'click',function(e){
+            console.log('google clicked again')
+            e.preventDefault();
+      },true) // event capturing 
+
+    </script>
+</body>
+</html>
