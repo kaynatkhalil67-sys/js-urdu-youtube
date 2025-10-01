@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> chai aur javascript </h1>
+    <button id = 'start'>start</button>
+    <button id ='stop'>Stop</button>
+</body>
+<script>
+    // this will print after 1 sec interval 'kainat' infinitly 
+    setInterval(function(){
+        console.log('kainat', Date.now());        
+    },1000)
+    // another way with third parameter
+    const saydate = function(str){
+        console.log(str, Date.now());
+        
+    }
+    setInterval(saydate,1000,"hi")
+
+    // now it's printing infinite time we have to stop this so
+
+     // const interval =setInterval(saydate,1000,"hi")
+     // clearInterval(interval)
+     
+
+</script>
+</html>

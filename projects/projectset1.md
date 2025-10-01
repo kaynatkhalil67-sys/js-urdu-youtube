@@ -71,3 +71,58 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+## project 3 solution 
+```javascript 
+// generate a random color 
+const randomColor= function(){
+  const hex= '0123456789ABCDEF'
+  let color = '#'
+  for (let i =0;i<6;i++)
+  {
+color +=hex[Math.floor(Math.random() * 16)]
+  }
+  return color;
+}
+let interval ;
+const startchangingcolor = function(){
+  if(!interval){
+  interval = setInterval(changebgcolor,1000)
+  }
+  function changebgcolor(){
+  document.body.style.backgroundColor=randomColor();
+  }
+}
+const stopchangingcolor = function(){
+
+clearInterval(interval)
+interval=null;
+// this vanishes the value of interval just to free memory, it will 
+}
+
+document.querySelector ('#start').addEventListener( 'click', startchangingcolor)
+
+document.querySelector ('#stop').addEventListener( 'click', stopchangingcolor)
+```
+
+## project 4 solution 
+```javascript 
+
+dEventListener('keydown',(e)=>{
+  insert.innerHTML=`
+  <div class="color">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>Keycode</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>${e.key === ' '? 'space':e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>
+    </div>
+    `;
+});
+```
